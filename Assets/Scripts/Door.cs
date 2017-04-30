@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour {
 	public int LevelToLoad;
@@ -22,7 +23,8 @@ public class Door : MonoBehaviour {
 	void OnTriggerStay2D(Collider2D col) {
 		if (col.CompareTag ("Player")) {
 			if (Input.GetKeyDown ("e")) {
-				Application.LoadLevel (LevelToLoad);
+				//Application.LoadLevel (LevelToLoad);
+				SceneManager.LoadScene(LevelToLoad);
 			}
 		}
 

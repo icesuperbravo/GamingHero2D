@@ -12,10 +12,14 @@ public class PlayerController : MonoBehaviour {
 	private Animator anim;
 	private float maxMoveSpeed = 3.0f;
 
+	//private bool PlayerExists;
+
 	// Use this for initialization
 	void Start () {
 		rb2d = gameObject.GetComponent<Rigidbody2D> ();
 		anim = gameObject.GetComponent<Animator> ();
+
+		DontDestroyOnLoad (transform.gameObject);
 	}
 
 	// Update is called once per frame

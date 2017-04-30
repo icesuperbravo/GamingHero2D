@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - GameMaster
+  - PauseUI
   layers:
   - Default
   - TransparentFX
@@ -39,6 +40,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3602001037
+    locked: 0
   - name: Ground
     uniqueID: 1541469575
     locked: 0

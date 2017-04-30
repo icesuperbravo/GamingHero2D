@@ -50,13 +50,10 @@
      <None Include="Assets\Arts\kenney-animalpack\Spritesheet\square_nodetails_outline.xml" />
      <None Include="Assets\Arts\UIpack\Spritesheet\blueSheet.xml" />
      <None Include="Assets\Arts\kenney-animalpack\Spritesheet\square.xml" />
-     <None Include="Assets\Arts\platformerGraphicsDeluxe_Updated\Items\items_spritesheet.xml" />
      <None Include="Assets\Arts\Platformer Art Complete Pack\license.txt" />
      <None Include="Assets\Arts\Platformer Art Complete Pack\Extra animations and enemies\Spritesheets\aliens.xml" />
-     <None Include="Assets\Arts\platformerGraphicsDeluxe_Updated\HUD\hud_spritesheet.xml" />
      <None Include="Assets\Arts\UIpack\Spritesheet\yellowSheet.xml" />
      <None Include="Assets\Arts\Platformer Art Complete Pack\Base pack\Items\items_spritesheet.xml" />
-     <None Include="Assets\Arts\platformerGraphicsDeluxe_Updated\Tiles\tiles_spritesheet.xml" />
      <None Include="Assets\Arts\Platformer Art Complete Pack\Base pack\HUD\hud_spritesheet.xml" />
      <None Include="Assets\Arts\UIpack\Spritesheet\greenSheet.xml" />
      <None Include="Assets\Arts\Platformer Art Complete Pack\Base pack\Player\p3_spritesheet.txt" />
@@ -68,12 +65,9 @@
      <None Include="Assets\Arts\Platformer Art Complete Pack\Extra animations and enemies\Spritesheets\alienBlue.xml" />
      <None Include="Assets\Arts\kenney-animalpack\Spritesheet\round.xml" />
      <None Include="Assets\Arts\kenney-animalpack\Spritesheet\square_nodetails.xml" />
-     <None Include="Assets\Arts\platformerGraphicsDeluxe_Updated\license.txt" />
      <None Include="Assets\Arts\kenney-animalpack\Spritesheet\round_nodetails_outline.xml" />
      <None Include="Assets\Arts\kenney-animalpack\Spritesheet\round_outline.xml" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
-     <None Include="Assets\Arts\platformerGraphicsDeluxe_Updated\Player\p3_spritesheet.txt" />
-     <None Include="Assets\Arts\platformerGraphicsDeluxe_Updated\Player\p2_spritesheet.txt" />
      <None Include="Assets\Arts\kenney-animalpack\Spritesheet\square_outline.xml" />
      <None Include="Assets\Arts\Platformer Art Complete Pack\Base pack\Tiles\tiles_spritesheet.xml" />
      <None Include="Assets\Arts\kenney-animalpack\License.txt" />
@@ -84,9 +78,7 @@
      <None Include="Assets\Arts\Platformer Art Complete Pack\Base pack\Player\p2_spritesheet.txt" />
      <None Include="Assets\Arts\Platformer Art Complete Pack\Extra animations and enemies\Spritesheets\alienBeige.xml" />
      <None Include="Assets\Arts\Platformer Art Complete Pack\Extra animations and enemies\Spritesheets\alienGreen.xml" />
-     <None Include="Assets\Arts\platformerGraphicsDeluxe_Updated\Enemies\enemies_spritesheet.txt" />
      <None Include="Assets\Arts\Platformer Art Complete Pack\Extra animations and enemies\Spritesheets\alienYellow.xml" />
-     <None Include="Assets\Arts\platformerGraphicsDeluxe_Updated\Player\p1_spritesheet.txt" />
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>

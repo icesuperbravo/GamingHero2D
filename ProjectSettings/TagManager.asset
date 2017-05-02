@@ -6,6 +6,7 @@ TagManager:
   tags:
   - GameMaster
   - PauseUI
+  - InputText
   layers:
   - Default
   - TransparentFX

@@ -7,4 +7,8 @@ public class GameMaster : MonoBehaviour {
 
 	public Text InputText;
 
+	void Start () {
+		DontDestroyOnLoad (transform.gameObject);
+	}
+
 }

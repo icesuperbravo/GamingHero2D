@@ -12,8 +12,6 @@ public class PlayerController : MonoBehaviour {
 	private Animator anim;
 	private float maxMoveSpeed = 3.0f;
 
-	//private bool PlayerExists;
-
 	// Use this for initialization
 	void Start () {
 		rb2d = gameObject.GetComponent<Rigidbody2D> ();
@@ -39,8 +37,12 @@ public class PlayerController : MonoBehaviour {
 	{
 		//Moving the player
 		float h = Input.GetAxisRaw ("Horizontal");
-		rb2d.AddForce ((Vector2.right * moveSpeed) * h );
+		if (Input.GetAxisRaw ("Horizontal") > 0.5f || Input.GetAxisRaw ("Horizontal") < -0.5f)
+			rb2d.velocity = new Vector2 (h * moveSpeed, rb2d.velocity.y);
 
+		if (Input.GetAxisRaw ("Horizontal") < 0.5f && Input.GetAxisRaw ("Horizontal") > -0.5f)
+			rb2d.velocity = new Vector2 (0, rb2d.velocity.y);
+		
 		if (rb2d.velocity.x > maxMoveSpeed) 
 		{
 			rb2d.velocity = new Vector2 (maxMoveSpeed, rb2d.velocity.y);

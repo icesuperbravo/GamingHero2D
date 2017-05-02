@@ -13,7 +13,7 @@ public class Door : MonoBehaviour {
 	{
 		gm = GameObject.FindGameObjectWithTag ("GameMaster").GetComponent<GameMaster> ();
 	}
-
+		
 	void OnTriggerEnter2D(Collider2D col) {
 		if (col.CompareTag ("Player")) {
 			gm.InputText.text = ("Press 'E' to enter the new world!");
@@ -23,7 +23,6 @@ public class Door : MonoBehaviour {
 	void OnTriggerStay2D(Collider2D col) {
 		if (col.CompareTag ("Player")) {
 			if (Input.GetKeyDown ("e")) {
-				//Application.LoadLevel (LevelToLoad);
 				SceneManager.LoadScene(LevelToLoad);
 			}
 		}

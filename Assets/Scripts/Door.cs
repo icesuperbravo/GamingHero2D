@@ -6,31 +6,40 @@ using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour {
 	public int LevelToLoad;
+	public string[] dialogueLines;
 
-	private GameMaster gm;
+	private DialogueManager dManager;
+
 
 	void Start() 
 	{
-		gm = GameObject.FindGameObjectWithTag ("GameMaster").GetComponent<GameMaster> ();
+		dManager = FindObjectOfType<DialogueManager> ();
 	}
 		
-	void OnTriggerEnter2D(Collider2D col) {
-		if (col.CompareTag ("Player")) {
-			gm.InputText.text = ("Press 'E' to enter the new world!");
+	void OnTriggerEnter2D(Collider2D col) 
+	{
+		dManager.dialogueLines = dialogueLines;
+		dManager.currentLine = 0;
+		if (col.CompareTag ("Player")) 
+		{
+			dManager.hint.text = "O.O";
+			dManager.ShowBox();
+
 		}
-		
 	}
 	void OnTriggerStay2D(Collider2D col) {
-		if (col.CompareTag ("Player")) {
+		if (col.CompareTag ("Player")) 
+		{
 			if (Input.GetKeyDown ("e")) {
 				SceneManager.LoadScene(LevelToLoad);
+				dManager.HideBox();
 			}
 		}
 
 	}
 	void OnTriggerExit2D(Collider2D col) {
 		if (col.CompareTag ("Player")) {
-			gm.InputText.text = ("");
+			dManager.HideBox();
 		}
 	}
 }

@@ -14,11 +14,11 @@ public class Door : MonoBehaviour {
 	void Start() 
 	{
 		dManager = FindObjectOfType<DialogueManager> ();
+		dManager.dialogueLines = dialogueLines;
 	}
 		
 	void OnTriggerEnter2D(Collider2D col) 
 	{
-		dManager.dialogueLines = dialogueLines;
 		dManager.currentLine = 0;
 		if (col.CompareTag ("Player")) 
 		{

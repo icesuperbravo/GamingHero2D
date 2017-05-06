@@ -20,7 +20,8 @@ public class PauseMenu : MonoBehaviour {
 		}
 		if (PauseUI == null) {
 			Destroy (gameObject);
-		} else {
+		} else 
+		{
 			if (paused) {
 				PauseUI.SetActive (true);
 				Time.timeScale = 0; //Setting the time to 0

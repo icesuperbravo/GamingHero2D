@@ -1380,11 +1380,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueLines:
-  - 'Monkey:'
-  - 'Panda:'
-  - 'Monkey:'
-  - 'Panda:'
-  - 'Monkey:'
+  - Monkey:1
+  - Panda:2
+  - Monkey:3
+  - Panda:4
+  - Monkey:5
 --- !u!1 &1535912619
 GameObject:
   m_ObjectHideFlags: 0

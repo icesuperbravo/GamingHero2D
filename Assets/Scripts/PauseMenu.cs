@@ -45,5 +45,7 @@ public class PauseMenu : MonoBehaviour {
 
 	public void Quit() {
 		Application.Quit();
+		//Quit now doesn't work in the editor becoz the Quit() function only works when the whole exe is
+		// createdEditorApplication.Exit(0); should be the right function to call to quit the editor
 	}
 }

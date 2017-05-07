@@ -305,7 +305,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 692725329}
         m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
@@ -923,8 +923,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: Resume
+      - m_Target: {fileID: 1924140897}
+        m_MethodName: HideBox
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1642,7 +1642,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 692725329}
         m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
@@ -2897,7 +2897,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 692725329}
         m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
@@ -3538,6 +3538,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   taskOne: {fileID: 2028634384}
+  story: {fileID: 12711739}
+  storyLines:
+  - "s1. \u5F88\u96BE\u505A\u7684\u597D\u4E0D\u597D"
+  - "s2.\u5988\u4E2A\u9E21\uFF0C\u5F20\u5634\u5C31\u95EE\u529F\u80FD\u80FD\u4E0D\u80FD\u5B9E\u73B0\uFF01 "
+  - "s3.\u8001\u5B50\u771F\u7684\u5F88\u65B9"
+  currentLine: 0
 --- !u!1 &1944112992
 GameObject:
   m_ObjectHideFlags: 0

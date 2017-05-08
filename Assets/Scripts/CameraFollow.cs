@@ -16,10 +16,22 @@ public class CameraFollow : MonoBehaviour {
 	public Vector3 minCameraPos;
 	public Vector3 maxCameraPos;
 
+
+	private static bool cameraExists;
+
 	// Use this for initialization
 	void Start () 
 	{
 		player = GameObject.FindGameObjectWithTag ("Player");
+
+//		if (!cameraExists) {
+//	        cameraExists = true;
+//			DontDestroyOnLoad (transform.gameObject);
+//		} else {
+//			Destroy (gameObject);
+//		}
+
+
 
 		DontDestroyOnLoad (transform.gameObject);
 	}

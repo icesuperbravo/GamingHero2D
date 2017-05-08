@@ -23,10 +23,14 @@ public class MonkeyController : MonoBehaviour {
 	{
 		if (dManager.currentLine == dialogueLines.Length) 
 		{
+			dManager.HideBox ();
 			taskOne.ShowBox ();
+			//dManager.currentLine = 0;
+
 		}
 
 	}
+		
 
 //	void OnTriggerEnter2D(Collider2D col) 
 //	{

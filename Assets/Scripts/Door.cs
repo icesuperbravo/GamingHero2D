@@ -24,6 +24,7 @@ public class Door : MonoBehaviour {
 		{
 			dManager.hint.text = "O.O";
 			dManager.ShowBox();
+			Debug.Log ("Hit the Door");
 
 		}
 	}

@@ -43,16 +43,26 @@ public class TaskOneUI : MonoBehaviour {
 	public void ShowBox()   
 	{
 		taskOne.SetActive (true);
+		Time.timeScale = 0; //Setting the time to 0
 	}
 
 	public void HideBox()
 	{
 		taskOne.SetActive (false);
+	    Time.timeScale = 1; //Setting the time to 0
+
 	}
+
 
 	public void Option1 ()
 	{
-		
+		Debug.Log("You click option1");
+		//taskOne.SetActive (false);
+	}
+
+	public void Option2 ()
+	{
+		Debug.Log("You click option2");
 	}
 
 }

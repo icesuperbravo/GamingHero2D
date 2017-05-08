@@ -7,11 +7,23 @@ public class PauseMenu : MonoBehaviour {
 
 	public GameObject PauseUI;
 
+
 	private bool paused = false;
+	private static bool canvasExists;
 
 	void Start() {
 		PauseUI.SetActive (false);  //Pause UI will be disabled when game starts
+
+//		if (!canvasExists) {
+//			canvasExists = true;
+//			DontDestroyOnLoad (transform.root.gameObject); //http://answers.unity3d.com/questions/441721/dontdestroyonload-not-working.html	
+//
+//		} else {
+//			Destroy (transform.root.gameObject);
+//		}
+
 		DontDestroyOnLoad (transform.root.gameObject); //http://answers.unity3d.com/questions/441721/dontdestroyonload-not-working.html	
+
 	}
 
 	void Update() {
@@ -34,9 +46,12 @@ public class PauseMenu : MonoBehaviour {
 		}
 
 
+
+
 	}
 	public void Resume() {
 		paused = false;
+		Debug.Log ("Resume");
 	}
 
 	public void Restart() {
@@ -48,4 +63,5 @@ public class PauseMenu : MonoBehaviour {
 		//Quit now doesn't work in the editor becoz the Quit() function only works when the whole exe is
 		// createdEditorApplication.Exit(0); should be the right function to call to quit the editor
 	}
+		
 }

@@ -147,7 +147,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 37
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -718,6 +718,7 @@ MonoBehaviour:
   - aa
   - bb
   currentLine: 0
+  taskNumber: 0
   dialogueActive: 0
 --- !u!1 &288098522
 GameObject:
@@ -1045,8 +1046,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: Restart
+      - m_Target: {fileID: 565360572}
+        m_MethodName: Option3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1251,7 +1252,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 278, y: -34}
+  m_AnchoredPosition: {x: 278, y: -54}
   m_SizeDelta: {x: 255, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &498023596
@@ -1468,10 +1469,12 @@ MonoBehaviour:
   taskOne: {fileID: 2028634384}
   story: {fileID: 12711739}
   storyLines:
-  - s1
-  - s2
-  - s3
+  - So do you want to help me first and listen my story?
+  respondLines:
+  - 'Monkey: Alright! You have made your own choice!'
+  - 'Monkey: Now as promised, I will give my phone to help you get out of the cage.'
   currentLine: 0
+  taskActive: 0
 --- !u!1 &577022879
 GameObject:
   m_ObjectHideFlags: 0
@@ -1955,8 +1958,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3, y: 39.394}
-  m_SizeDelta: {x: 805, y: 24.629}
+  m_AnchoredPosition: {x: 3, y: 36}
+  m_SizeDelta: {x: 805, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &754429898
 MonoBehaviour:
@@ -1984,11 +1987,11 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 6
+    m_Alignment: 3
     m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 
 --- !u!222 &754429899
@@ -2634,8 +2637,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1169939728}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.3565893, y: -1.1366454, z: 0}
-  m_LocalScale: {x: 1.4384822, y: 1.4658865, z: 1}
+  m_LocalPosition: {x: 6.06, y: -1.1366454, z: 0}
+  m_LocalScale: {x: 1.2407825, y: 1.4658865, z: 1}
   m_Children: []
   m_Father: {fileID: 619134376}
   m_RootOrder: 15
@@ -2651,9 +2654,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.15679048, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.7, y: 0.70000005}
+  m_Size: {x: 1.618081, y: 0.7}
 --- !u!114 &1169939732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2735,7 +2738,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Oh I don't Have time and I have to escape!
+  m_Text: Oh I don't Have time and I really have to leave now!
 --- !u!222 &1201117850
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3835,6 +3838,7 @@ GameObject:
   - component: {fileID: 2124919922}
   - component: {fileID: 2124919924}
   - component: {fileID: 2124919923}
+  - component: {fileID: 2124919925}
   m_Layer: 0
   m_Name: Panda
   m_TagString: Player
@@ -3955,6 +3959,19 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 3.0399997, y: 2.57}
+--- !u!114 &2124919925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2124919918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81753f1c17874466fade1e09d406e55d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooperation: 0
+  digitalLiteracy: 0
 --- !u!1 &2136066832
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,48 +8,58 @@ public class MonkeyController : MonoBehaviour {
 
 	private DialogueManager dManager;
 
-	private TaskOneUI taskOne;
-
 	public string[] dialogueLines;
+	public string[] respondLines;
+
 
 	void Start() 
 	{
 		dManager = FindObjectOfType<DialogueManager> ();
-		taskOne= FindObjectOfType<TaskOneUI> ();
+		dManager.hint.text = "Press Space to Continue";
 
 	}
 
 	void Update()
 	{
-		if (dManager.currentLine == dialogueLines.Length) 
-		{
-			dManager.HideBox ();
-			taskOne.ShowBox ();
-			//dManager.currentLine = 0;
-
-		}
+//		if (dManager.dialogueActive ==false && stayCollide == true) 
+//		{
+//			dManager.HideBox ();
+//			taskOne.ShowBox ();
+//
+//		}
+//		if (taskOne.taskCompleted && !dManager.dialogueActive) 
+//		{
+//			taskOne.HideBox ();
+//			dManager.currentLine = 0;
+//			dManager.dialogueLines = respondLines;
+//			dManager.ShowBox ();
+//			taskOne.taskCompleted = false;
+//
+//
+//		}
 
 	}
-		
 
-//	void OnTriggerEnter2D(Collider2D col) 
-//	{
-//		if (col.CompareTag ("Player")) 
-//		{
-//				dManager.ShowBox (dialogue);
-//		}
-//
-//	}
-	void OnTriggerStay2D(Collider2D col) 
+	void OnTriggerEnter2D(Collider2D col) 
 	{
 		dManager.dialogueLines = dialogueLines;
 		dManager.currentLine = 0;
 		if (col.CompareTag ("Player")) 
 		{
-			dManager.hint.text = "Press Space to Continue";
 			dManager.ShowBox ();
-
 		}
+
+	}
+		
+
+	void OnTriggerStay2D(Collider2D col) 
+	{
+//		dManager.dialogueLines = dialogueLines;
+//		dManager.currentLine = 0;
+//		if (col.CompareTag ("Player")) 
+//		{
+//			dManager.ShowBox ();
+//		}
 
 	}
 	void OnTriggerExit2D(Collider2D col) {
@@ -58,4 +68,5 @@ public class MonkeyController : MonoBehaviour {
 			dManager.HideBox (); 
 		}
 	}
+	 	
 }

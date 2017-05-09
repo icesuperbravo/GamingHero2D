@@ -8,11 +8,21 @@ public class TaskOneUI : MonoBehaviour {
 
 	public GameObject taskOne;
 	public Text story;
-	public string[] storyLines; 
+
+	public string[] storyLines;
+	public string[] respondLines;
 	public int currentLine;
+
+	public bool taskActive;
+
+	private PlayerGradingSystem points;
+	private DialogueManager dialogue;
 
 	// Use this for initialization
 	void Start () {
+		points= FindObjectOfType<PlayerGradingSystem> ();
+		dialogue = FindObjectOfType<DialogueManager> ();
+
 		taskOne.SetActive (false);
 		currentLine = 0;
 		story.text = storyLines [currentLine];
@@ -22,20 +32,20 @@ public class TaskOneUI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if (taskOne.activeInHierarchy == true) 
-		{
-			if (Input.GetKeyDown (KeyCode.Space)) 
+		
+			if (taskActive && Input.GetKeyDown (KeyCode.Space)) 
 			{
-				if (currentLine >= storyLines.Length-1) 
+				if (currentLine >= storyLines.Length) 
 				{
-					taskOne.SetActive (false);
-					currentLine = storyLines.Length;
+//					taskOne.SetActive (false);
+//					taskActive = false;
+				    HideBox();
+					//currentLine = storyLines.Length;
 				} else {
 					currentLine++;
-					story.text = storyLines [currentLine];
+					story.text = storyLines [currentLine-1];
 				}
 			}
-		}
 
 	}
 
@@ -43,26 +53,48 @@ public class TaskOneUI : MonoBehaviour {
 	public void ShowBox()   
 	{
 		taskOne.SetActive (true);
-		Time.timeScale = 0; //Setting the time to 0
+		taskActive = true;
+		Debug.Log("task one active");
 	}
 
 	public void HideBox()
 	{
 		taskOne.SetActive (false);
-	    Time.timeScale = 1; //Setting the time to 0
-
+		taskActive = false;
+		Debug.Log("task one NOT active");
 	}
 
-
+	public void SwitchToDialogue ()
+	{
+		dialogue.currentLine = 0;
+		dialogue.dialogueLines = respondLines;
+		dialogue.inputText.text = respondLines[dialogue.currentLine];
+		dialogue.ShowBox ();
+	}
+		
 	public void Option1 ()
 	{
 		Debug.Log("You click option1");
-		//taskOne.SetActive (false);
+		HideBox ();
+		points.cooperation = points.cooperation + 1;
+		SwitchToDialogue ();
 	}
 
 	public void Option2 ()
 	{
 		Debug.Log("You click option2");
+		HideBox ();
+		points.cooperation = points.cooperation + 2;
+		SwitchToDialogue ();
 	}
+
+	public void Option3 ()
+	{   
+		Debug.Log("You click option3");
+		HideBox ();
+		points.cooperation = points.cooperation + 3;
+		SwitchToDialogue ();
+	}
+
 
 }

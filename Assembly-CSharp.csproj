@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\PlayerController1.cs" />
+     <Compile Include="Assets\Scripts\PlayerGradingSystem.cs" />
      <Compile Include="Assets\Scripts\PlayerStartPoint.cs" />
      <Compile Include="Assets\Scripts\TaskOneUI.cs" />
      <None Include="Assets\Arts\kenney-animalpack\Spritesheet\square_nodetails_outline.xml" />

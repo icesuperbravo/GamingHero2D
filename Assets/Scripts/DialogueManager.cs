@@ -17,6 +17,7 @@ public class DialogueManager : MonoBehaviour {
 	public bool dialogueActive;
 
 	private TaskOneUI taskOne;
+	private TaskTwoUI taskTwo;
 
 
 
@@ -24,7 +25,7 @@ public class DialogueManager : MonoBehaviour {
 	void Start () {
 		dBox.SetActive (false);
 		taskOne = FindObjectOfType<TaskOneUI> ();
-
+		taskTwo = FindObjectOfType<TaskTwoUI> ();
 	}
 	
 	// Update is called once per frame
@@ -34,16 +35,21 @@ public class DialogueManager : MonoBehaviour {
 		{
 			if (currentLine >= dialogueLines.Length-1) 
 			{
-				dBox.SetActive (false);
-				dialogueActive = false;
+//				dBox.SetActive (false);
+//				dialogueActive = false;
+				HideBox();
 				taskNumber++;
 				switch (taskNumber) 
 				{
 				case 1:
-					taskOne.ShowBox();
+					taskOne.ShowBox ();
+					taskOne.currentLine = 0;
 					currentLine = 0;
 					break;
 				case 2:
+					taskTwo.ShowBox ();
+					taskTwo.currentLine = 0;
+					currentLine = 0;
 					break;
 				case 3:
 					break;

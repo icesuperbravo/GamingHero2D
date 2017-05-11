@@ -8,6 +8,7 @@ public class TaskOneUI : MonoBehaviour {
 
 	public GameObject taskOne;
 	public Text story;
+	public Text Hint;
 
 	public string[] storyLines;
 	public string[] respondLines;
@@ -26,7 +27,6 @@ public class TaskOneUI : MonoBehaviour {
 		taskOne.SetActive (false);
 		currentLine = 0;
 		story.text = storyLines [currentLine];
-
 	}
 
 	// Update is called once per frame
@@ -35,18 +35,16 @@ public class TaskOneUI : MonoBehaviour {
 		
 			if (taskActive && Input.GetKeyDown (KeyCode.Space)) 
 			{
-				if (currentLine >= storyLines.Length) 
+				if (currentLine >= storyLines.Length-1) 
 				{
-//					taskOne.SetActive (false);
-//					taskActive = false;
-				    HideBox();
+				    // HideBox();
 					//currentLine = storyLines.Length;
+				    
 				} else {
 					currentLine++;
 					story.text = storyLines [currentLine-1];
 				}
 			}
-
 	}
 
 

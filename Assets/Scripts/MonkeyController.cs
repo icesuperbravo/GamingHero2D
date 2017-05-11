@@ -9,7 +9,6 @@ public class MonkeyController : MonoBehaviour {
 	private DialogueManager dManager;
 
 	public string[] dialogueLines;
-	public string[] respondLines;
 
 
 	void Start() 
@@ -42,10 +41,12 @@ public class MonkeyController : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col) 
 	{
-		dManager.dialogueLines = dialogueLines;
-		dManager.currentLine = 0;
+		
 		if (col.CompareTag ("Player")) 
 		{
+			dManager.dialogueLines = dialogueLines;
+			dManager.currentLine = 0;
+			dManager.inputText.text = dialogueLines [dManager.currentLine];
 			dManager.ShowBox ();
 		}
 

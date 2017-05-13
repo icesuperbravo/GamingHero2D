@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\PlayerGradingSystem.cs" />
      <Compile Include="Assets\Scripts\PlayerStartPoint.cs" />
      <Compile Include="Assets\Scripts\TaskOneUI.cs" />
+     <Compile Include="Assets\Scripts\TaskThreeUI.cs" />
      <Compile Include="Assets\Scripts\TaskTwoUI.cs" />
      <None Include="Assets\Arts\kenney-animalpack\Spritesheet\square_nodetails_outline.xml" />
      <None Include="Assets\Arts\UIpack\Spritesheet\blueSheet.xml" />

@@ -18,6 +18,7 @@ public class DialogueManager : MonoBehaviour {
 
 	private TaskOneUI taskOne;
 	private TaskTwoUI taskTwo;
+	private TaskThreeUI taskThree;
 
 
 
@@ -26,6 +27,7 @@ public class DialogueManager : MonoBehaviour {
 		dBox.SetActive (false);
 		taskOne = FindObjectOfType<TaskOneUI> ();
 		taskTwo = FindObjectOfType<TaskTwoUI> ();
+		taskThree =  FindObjectOfType<TaskThreeUI> ();
 	}
 	
 	// Update is called once per frame
@@ -52,6 +54,9 @@ public class DialogueManager : MonoBehaviour {
 					currentLine = 0;
 					break;
 				case 3:
+					taskThree.ShowBox ();
+					taskThree.currentLine = 0;
+					currentLine = 0;
 					break;
 				case 4:
 					break;

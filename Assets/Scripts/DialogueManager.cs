@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour {
 
@@ -19,15 +20,18 @@ public class DialogueManager : MonoBehaviour {
 	private TaskOneUI taskOne;
 	private TaskTwoUI taskTwo;
 	private TaskThreeUI taskThree;
+	private TaskFourUI taskFour;
 
 
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 		dBox.SetActive (false);
 		taskOne = FindObjectOfType<TaskOneUI> ();
 		taskTwo = FindObjectOfType<TaskTwoUI> ();
 		taskThree =  FindObjectOfType<TaskThreeUI> ();
+		taskFour =  FindObjectOfType<TaskFourUI> ();
 	}
 	
 	// Update is called once per frame
@@ -37,8 +41,6 @@ public class DialogueManager : MonoBehaviour {
 		{
 			if (currentLine >= dialogueLines.Length-1) 
 			{
-//				dBox.SetActive (false);
-//				dialogueActive = false;
 				HideBox();
 				taskNumber++;
 				switch (taskNumber) 
@@ -59,8 +61,13 @@ public class DialogueManager : MonoBehaviour {
 					currentLine = 0;
 					break;
 				case 4:
+					taskFour.ShowBox ();
+					taskFour.currentLine = 0;
+					currentLine = 0;
 					break;
 				case 5:
+					//ToDo: Connects to Next Cage
+					//SceneManager.LoadScene(2);  
 					break;
 				}
 			} else {

@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\PlayerController1.cs" />
      <Compile Include="Assets\Scripts\PlayerGradingSystem.cs" />
      <Compile Include="Assets\Scripts\PlayerStartPoint.cs" />
+     <Compile Include="Assets\Scripts\TaskFourUI.cs" />
      <Compile Include="Assets\Scripts\TaskOneUI.cs" />
      <Compile Include="Assets\Scripts\TaskThreeUI.cs" />
      <Compile Include="Assets\Scripts\TaskTwoUI.cs" />

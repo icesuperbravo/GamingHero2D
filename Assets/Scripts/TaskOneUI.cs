@@ -18,11 +18,14 @@ public class TaskOneUI : MonoBehaviour {
 
 	private PlayerGradingSystem points;
 	private DialogueManager dialogue;
+	private SFXManager sfx;
 
 	// Use this for initialization
 	void Start () {
 		points= FindObjectOfType<PlayerGradingSystem> ();
 		dialogue = FindObjectOfType<DialogueManager> ();
+		sfx = FindObjectOfType<SFXManager> ();
+
 
 		taskOne.SetActive (false);
 		currentLine = 0;
@@ -72,6 +75,7 @@ public class TaskOneUI : MonoBehaviour {
 		
 	public void Option1 ()
 	{
+		sfx.ButtonClicked.Play ();
 		Debug.Log("You click option1");
 		HideBox ();
 		points.cooperation = points.cooperation + 1;
@@ -80,6 +84,7 @@ public class TaskOneUI : MonoBehaviour {
 
 	public void Option2 ()
 	{
+		sfx.ButtonClicked.Play ();
 		Debug.Log("You click option2");
 		HideBox ();
 		points.cooperation = points.cooperation + 2;
@@ -88,6 +93,7 @@ public class TaskOneUI : MonoBehaviour {
 
 	public void Option3 ()
 	{   
+		sfx.ButtonClicked.Play ();
 		Debug.Log("You click option3");
 		HideBox ();
 		points.cooperation = points.cooperation + 3;

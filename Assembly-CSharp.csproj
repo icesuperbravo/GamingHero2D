@@ -52,11 +52,14 @@
      <Compile Include="Assets\Scripts\Door.cs" />
      <Compile Include="Assets\Scripts\GameMaster.cs" />
      <Compile Include="Assets\Scripts\MonkeyController.cs" />
+     <Compile Include="Assets\Scripts\MusicManager.cs" />
+     <Compile Include="Assets\Scripts\MusicSwitcher.cs" />
      <Compile Include="Assets\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\PlayerController1.cs" />
      <Compile Include="Assets\Scripts\PlayerGradingSystem.cs" />
      <Compile Include="Assets\Scripts\PlayerStartPoint.cs" />
+     <Compile Include="Assets\Scripts\SFXManager.cs" />
      <Compile Include="Assets\Scripts\TaskFourUI.cs" />
      <Compile Include="Assets\Scripts\TaskOneUI.cs" />
      <Compile Include="Assets\Scripts\TaskThreeUI.cs" />

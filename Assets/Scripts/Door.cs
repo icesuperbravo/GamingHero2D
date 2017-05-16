@@ -9,11 +9,13 @@ public class Door : MonoBehaviour {
 	public string[] dialogueLines;
 
 	private DialogueManager dManager;
+	private MusicManager mManager;
 
 
 	void Start() 
 	{
 		dManager = FindObjectOfType<DialogueManager> ();
+		mManager = FindObjectOfType<MusicManager> ();
 		dManager.hint.text = "O.O";
 		dManager.dialogueLines = dialogueLines;
 
@@ -36,6 +38,7 @@ public class Door : MonoBehaviour {
 			if (Input.GetKeyDown ("e")) {
 				SceneManager.LoadScene(LevelToLoad);
 				dManager.HideBox();
+				mManager.SwitchTrack (1);
 			}
 		}
 

@@ -1381,15 +1381,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - Panda:Oh! Why I am here? Is it a cage?
-  - 'Monkey: You are just falling into the trick.But I think maybe I can help you
-    andMonkey: You are falling into the trick!'
+  - 'Monkey: ck.But I think maybe I can help you andMonkey: You are falling into the
+    trick!'
   - 'Monkey: But I think maybe I can help you and borrow my phone to you to get information. '
   - 'Monkey: Right now I just have a bad mood. '
   - 'Monkey: It would be great if you want to listen my story'
   - 'Monkey:Of course. It''s up to you . '
-  respondLines:
-  - 'Monkey: Alright! You have made your own choice!'
-  - 'Monkey: Now as promised, I will give my phone to help you get out of the cage.'
 --- !u!1 &1535912619
 GameObject:
   m_ObjectHideFlags: 0

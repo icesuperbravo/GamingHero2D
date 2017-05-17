@@ -16,6 +16,7 @@ public class DialogueManager : MonoBehaviour {
 	public int taskNumber;
 
 	public bool dialogueActive;
+	public bool preventTasks;
 
 	private TaskOneUI taskOne;
 	private TaskTwoUI taskTwo;
@@ -36,11 +37,12 @@ public class DialogueManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () 
-	{
-		if (dialogueActive && Input.GetKeyDown (KeyCode.Space)) 
+	{   
+		if (dialogueActive && Input.GetKeyDown (KeyCode.Space)&& SceneManager.GetActiveScene().buildIndex ==1 ) 
 		{
 			if (currentLine >= dialogueLines.Length-1) 
 			{
+				
 				HideBox();
 				taskNumber++;
 				switch (taskNumber) 
@@ -68,6 +70,9 @@ public class DialogueManager : MonoBehaviour {
 				case 5:
 					//ToDo: Connects to Next Cage
 					//SceneManager.LoadScene(2);  
+					break;
+				default:
+					preventTasks = false;
 					break;
 				}
 			} else {

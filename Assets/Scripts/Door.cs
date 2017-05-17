@@ -35,11 +35,13 @@ public class Door : MonoBehaviour {
 	void OnTriggerStay2D(Collider2D col) {
 		if (col.CompareTag ("Player")) 
 		{
-			if (Input.GetKeyDown ("e")) {
+			if (Input.GetKeyDown ("e")) 
+			{
 				SceneManager.LoadScene(LevelToLoad);
 				dManager.HideBox();
 				mManager.SwitchTrack (1);
 			}
+
 		}
 
 	}

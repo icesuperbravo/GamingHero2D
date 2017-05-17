@@ -46,6 +46,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\RiskTaking\Scripts\BoxClick.cs" />
+     <Compile Include="Assets\RiskTaking\Scripts\CountBoxesOpened.cs" />
+     <Compile Include="Assets\RiskTaking\Scripts\ShowBox.cs" />
+     <Compile Include="Assets\RiskTaking\Scripts\TextManager.cs" />
+     <Compile Include="Assets\RiskTaking\Scripts\UICount.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\CanvasController.cs" />
      <Compile Include="Assets\Scripts\DialogueManager.cs" />
@@ -85,6 +90,7 @@
      <None Include="Assets\Arts\kenney-animalpack\Spritesheet\round_nodetails_outline.xml" />
      <None Include="Assets\Arts\kenney-animalpack\Spritesheet\round_outline.xml" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+     <None Include="Assets\RiskTaking\TextFiles\SnakeTalk.txt" />
      <None Include="Assets\Arts\kenney-animalpack\Spritesheet\square_outline.xml" />
      <None Include="Assets\Arts\Platformer Art Complete Pack\Base pack\Tiles\tiles_spritesheet.xml" />
      <None Include="Assets\Arts\kenney-animalpack\License.txt" />

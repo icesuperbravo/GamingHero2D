@@ -8,6 +8,7 @@ TagManager:
   - PauseUI
   - InputText
   - TaskOneUI
+  - Phone
   layers:
   - Default
   - TransparentFX

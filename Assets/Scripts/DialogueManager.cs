@@ -23,6 +23,11 @@ public class DialogueManager : MonoBehaviour {
 	private TaskThreeUI taskThree;
 	private TaskFourUI taskFour;
 
+	private GameObject phone;
+	private Animation phoneMovement;  
+
+
+
 
 
 	// Use this for initialization
@@ -33,6 +38,12 @@ public class DialogueManager : MonoBehaviour {
 		taskTwo = FindObjectOfType<TaskTwoUI> ();
 		taskThree =  FindObjectOfType<TaskThreeUI> ();
 		taskFour =  FindObjectOfType<TaskFourUI> ();
+		Debug.Log (taskFour);
+
+//		phoneMovement = FindObjectOfType<Animation> ();
+//		Debug.Log (phoneMovement);
+
+
 	}
 	
 	// Update is called once per frame
@@ -53,9 +64,13 @@ public class DialogueManager : MonoBehaviour {
 					currentLine = 0;
 					break;
 				case 2:
-					taskTwo.ShowBox ();
-					taskTwo.currentLine = 0;
-					currentLine = 0;
+					phone = GameObject.FindGameObjectWithTag ("Phone");
+					Debug.Log (phone);
+					phoneMovement = phone.GetComponent<Animation> ();
+					phoneMovement.Play ();
+//					taskTwo.ShowBox ();
+//					taskTwo.currentLine = 0;
+//					currentLine = 0;
 					break;
 				case 3:
 					taskThree.ShowBox ();

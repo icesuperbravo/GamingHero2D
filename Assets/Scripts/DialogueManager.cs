@@ -19,12 +19,12 @@ public class DialogueManager : MonoBehaviour {
 	public bool preventTasks;
 
 	private TaskOneUI taskOne;
-	private TaskTwoUI taskTwo;
+//	private TaskTwoUI taskTwo;
 	private TaskThreeUI taskThree;
 	private TaskFourUI taskFour;
-
-	private GameObject phone;
-	private Animation phoneMovement;  
+	 
+	private  PhoneController phoneController;
+	private  MapController mapController;
 
 
 
@@ -35,13 +35,10 @@ public class DialogueManager : MonoBehaviour {
 	{
 		dBox.SetActive (false);
 		taskOne = FindObjectOfType<TaskOneUI> ();
-		taskTwo = FindObjectOfType<TaskTwoUI> ();
+//		taskTwo = FindObjectOfType<TaskTwoUI> ();
 		taskThree =  FindObjectOfType<TaskThreeUI> ();
 		taskFour =  FindObjectOfType<TaskFourUI> ();
-		Debug.Log (taskFour);
 
-//		phoneMovement = FindObjectOfType<Animation> ();
-//		Debug.Log (phoneMovement);
 
 
 	}
@@ -64,13 +61,13 @@ public class DialogueManager : MonoBehaviour {
 					currentLine = 0;
 					break;
 				case 2:
-					phone = GameObject.FindGameObjectWithTag ("Phone");
-					Debug.Log (phone);
-					phoneMovement = phone.GetComponent<Animation> ();
-					phoneMovement.Play ();
 //					taskTwo.ShowBox ();
 //					taskTwo.currentLine = 0;
-//					currentLine = 0;
+					phoneController =  FindObjectOfType<PhoneController> ();
+					Debug.Log (phoneController);
+					phoneController.phoneAnimEnabled = true;
+					phoneController.PlayAnimation ();
+					currentLine = 0;
 					break;
 				case 3:
 					taskThree.ShowBox ();
@@ -83,8 +80,9 @@ public class DialogueManager : MonoBehaviour {
 					currentLine = 0;
 					break;
 				case 5:
-					//ToDo: Connects to Next Cage
-					//SceneManager.LoadScene(2);  
+					mapController = FindObjectOfType<MapController> ();
+					mapController.PlayAnimation ();
+					currentLine = 0;
 					break;
 				default:
 					preventTasks = false;

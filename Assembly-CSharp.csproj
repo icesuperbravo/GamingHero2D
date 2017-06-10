@@ -48,13 +48,17 @@
   <ItemGroup>
      <Compile Include="Assets\RiskTaking\Scripts\BoxClick.cs" />
      <Compile Include="Assets\RiskTaking\Scripts\CountBoxesOpened.cs" />
+     <Compile Include="Assets\RiskTaking\Scripts\ResultMenu.cs" />
+     <Compile Include="Assets\RiskTaking\Scripts\SaveResults.cs" />
      <Compile Include="Assets\RiskTaking\Scripts\ShowBox.cs" />
      <Compile Include="Assets\RiskTaking\Scripts\TextManager.cs" />
      <Compile Include="Assets\RiskTaking\Scripts\UICount.cs" />
+     <Compile Include="Assets\RiskTaking\Scripts\risktakingAwake.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\CanvasController.cs" />
      <Compile Include="Assets\Scripts\DialogueManager.cs" />
      <Compile Include="Assets\Scripts\Door.cs" />
+     <Compile Include="Assets\Scripts\ExitTriggerUI.cs" />
      <Compile Include="Assets\Scripts\GameMaster.cs" />
      <Compile Include="Assets\Scripts\MapController.cs" />
      <Compile Include="Assets\Scripts\MonkeyController.cs" />

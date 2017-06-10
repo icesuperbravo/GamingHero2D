@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraFollow : MonoBehaviour {
 
@@ -30,16 +31,18 @@ public class CameraFollow : MonoBehaviour {
 //		} else {
 //			Destroy (gameObject);
 //		}
-
-
-
 		DontDestroyOnLoad (transform.gameObject);
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		
+//		Debug.Log (SceneManager.GetActiveScene ().buildIndex);
+		if (SceneManager.GetActiveScene ().buildIndex == 2 && cameraExists == false) 
+		{
+			Destroy (gameObject);
+			cameraExists = true;
+		}	
 	}
 
 	void FixedUpdate() 

@@ -36,7 +36,7 @@ public class TaskOneUI : MonoBehaviour {
 	void Update () 
 	{
 		
-			if (taskActive && Input.GetKeyDown (KeyCode.Space)) 
+		if (taskActive &&  Input.GetMouseButtonDown(0)) 
 			{
 				if (currentLine >= storyLines.Length-1) 
 				{

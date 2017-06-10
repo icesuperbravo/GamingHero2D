@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class MonkeyController : MonoBehaviour {
 
 	private DialogueManager dManager;
+	private PlayerController1 pController;
 
 	public string[] dialogueLines;
 
@@ -14,8 +15,7 @@ public class MonkeyController : MonoBehaviour {
 	void Start() 
 	{
 		dManager = FindObjectOfType<DialogueManager> ();
-		dManager.hint.text = "Press Space to Continue";
-
+		dManager.hint.text = "Click me!";
 	}
 
 	void Update()
@@ -48,6 +48,10 @@ public class MonkeyController : MonoBehaviour {
 			dManager.currentLine = 0;
 			dManager.inputText.text = dialogueLines [dManager.currentLine];
 			dManager.ShowBox ();
+			//Only exist in scene 1;
+			pController = FindObjectOfType<PlayerController1> ();
+			pController.moveSpeed = 0.0f;
+
 		}
 
 	}

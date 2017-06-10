@@ -16,14 +16,15 @@ public class PauseMenu : MonoBehaviour {
 
 //		if (!canvasExists) {
 //			canvasExists = true;
+//			Debug.Log (canvasExists);
 //			DontDestroyOnLoad (transform.root.gameObject); //http://answers.unity3d.com/questions/441721/dontdestroyonload-not-working.html	
 //
 //		} else {
 //			Destroy (transform.root.gameObject);
-//		}
+//			Debug.Log ("Destory the object");
+//	}
 
-		DontDestroyOnLoad (transform.root.gameObject); //http://answers.unity3d.com/questions/441721/dontdestroyonload-not-working.html	
-
+	//	DontDestroyOnLoad (transform.root.gameObject); //http://answers.unity3d.com/questions/441721/dontdestroyonload-not-working.html	
 	}
 
 	void Update() {
@@ -51,11 +52,11 @@ public class PauseMenu : MonoBehaviour {
 	}
 	public void Resume() {
 		paused = false;
-		Debug.Log ("Resume");
 	}
 
 	public void Restart() {
 		SceneManager.LoadScene("Main");
+		PauseUI.SetActive (false);
 	}
 
 	public void Quit() {
